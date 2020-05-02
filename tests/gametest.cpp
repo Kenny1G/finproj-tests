@@ -131,7 +131,9 @@ TestObjs *setup() {
   objs->game1->addEntity(new_ent);
   
   objs->game1->setGameRules(new BasicGameRules());
+	#ifndef USE_TEXTUI_TESTS
   objs->game1->setUI(nullptr);
+	#endif //USE_TEXTUI_TESTS
 
   // game2 is like game1, but no entities are added.
   // The individual test functions that use it will add entities
